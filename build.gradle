@@ -1,12 +1,20 @@
 apply plugin: 'java'
-
-defaultTasks('build')
+apply plugin: 'eclipse'
 
 sourceCompatibility = '1.8'
 
+eclipse {
+	project {
+		natures('org.springsource.ide.eclipse.gradle.core.nature')
+	}
+}
 
 tasks.withType(JavaCompile) {
 	options.encoding = 'UTF-8'
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '2.5'
 }
 
 
