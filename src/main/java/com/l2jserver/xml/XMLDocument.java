@@ -18,23 +18,13 @@
  */
 package com.l2jserver.xml;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * @author UnAfraid
  */
-public class XMLDocument
+public class XMLDocument extends XMLElement
 {
-	private final List<XMLElement> _entries = new ArrayList<>();
-	
-	public void addEntry(XMLElement entry)
+	public XMLDocument()
 	{
-		_entries.add(entry);
-	}
-	
-	public List<XMLElement> getEntries()
-	{
-		return _entries;
+		super(null);
 	}
 }
